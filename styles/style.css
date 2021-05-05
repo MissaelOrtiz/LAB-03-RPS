@@ -30,6 +30,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    font-size: 1.5rem;
 }
 
 section {
