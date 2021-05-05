@@ -45,7 +45,9 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    /* border: solid 2px var(--color1); */
+    border: none;
+    border-radius: 50px;
 }
 
 header {
@@ -120,10 +122,13 @@ input {
   }
 input:checked + img {
       border: solid 3px gold;
+      animation: pulse 10s infinite ease-in-out;
+      border-radius: 50%;
   }
 input:hover + img {
-    background-color: goldenrod;
+    background-color: gold;
     animation: pulse 3s infinite ease-in-out;
+    border-radius: 50%;
 }
 .img {
       width: 150px;
