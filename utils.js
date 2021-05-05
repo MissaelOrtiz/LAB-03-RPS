@@ -1,4 +1,4 @@
-export function getRandomThrow(someNumber) {
+export function getThrow(someNumber) {
     if (someNumber === 3) {
         return 'Bolder';
     }
@@ -16,14 +16,14 @@ export function compareThrow(userThrow, computerThrow) {
     } else if (userThrow === 'Bolder' && computerThrow === 'Parchment') {
         return -1;
     } else if (userThrow === 'Bolder' && computerThrow === 'Shears') {
-        return 1;
+        return +1;
     } else if (userThrow === 'Parchment' && computerThrow === 'Bolder') {
-        return 1;
+        return +1;
     } else if (userThrow === 'Parchment' && computerThrow === 'Shears') {
         return -1;
     } else if (userThrow === 'Shears' && computerThrow === 'Parchment') {
         return +1;
     } else if (userThrow === 'Shears' && computerThrow === 'Bolder') {
-        return +1;
+        return -1;
     }
 }
