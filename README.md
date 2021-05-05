@@ -9,3 +9,28 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+## HTML
+1) HTML content showing rules
+2) Throw radio
+    -A bolder throw
+        -Establishes user throw as bolder
+    -A parchment throw
+        -Establishes user throw as parchment
+    -A shears throw
+        -Establishes user throw as shears
+3) A div element to show results
+4) Submit button
+
+## State
+computerThrow: the throw chosen by computer
+totalPlays: 0
+totalWins: 0
+
+## Events
+-[Submit click] compare userThrow against computerThrow
+    -bolder beats shear
+        -returns outcome in div
+    -shear beats parchment
+        -returns outcome in div
+    -parchment beats bolder
+        -returns outcome in div
