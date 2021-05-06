@@ -13,17 +13,9 @@ export function getThrow(someNumber) {
 export function compareThrow(userThrow, computerThrow) {
     if (userThrow === computerThrow) {
         return 0;
-    } else if (userThrow === 'Bolder' && computerThrow === 'Parchment') {
+    } else if ((userThrow === 'Bolder' && computerThrow === 'Parchment') || (userThrow === 'Parchment' && computerThrow === 'Shears') || (userThrow === 'Shears' && computerThrow === 'Bolder')) {
         return -1;
-    } else if (userThrow === 'Bolder' && computerThrow === 'Shears') {
+    } else if ((userThrow === 'Bolder' && computerThrow === 'Shears') || (userThrow === 'Parchment' && computerThrow === 'Bolder') || (userThrow === 'Shears' && computerThrow === 'Parchment')) {
         return +1;
-    } else if (userThrow === 'Parchment' && computerThrow === 'Bolder') {
-        return +1;
-    } else if (userThrow === 'Parchment' && computerThrow === 'Shears') {
-        return -1;
-    } else if (userThrow === 'Shears' && computerThrow === 'Parchment') {
-        return +1;
-    } else if (userThrow === 'Shears' && computerThrow === 'Bolder') {
-        return -1;
     }
 }
