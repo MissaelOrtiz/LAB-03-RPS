@@ -24,3 +24,12 @@ export function compareThrow(userThrow, computerThrow) {
         return 'win';
     }
 }
+
+export function printSpaget(tPlays, tWins, tDraws) {
+    let ratio = Math.ceil((tWins / tPlays) * 100);
+    const displayTotalWins = document.querySelector('#total-wins');
+    const displayTotalPlays = document.querySelector('#total-plays');
+    displayTotalWins.textContent = `Total Wins: ${tWins} Total Draws: ${tDraws} Total Losses ${Math.ceil(tPlays - (tWins + tDraws))}`;
+    displayTotalPlays.textContent = `Total Plays: ${tPlays}, W/L: ${ratio}%`;
+
+}
