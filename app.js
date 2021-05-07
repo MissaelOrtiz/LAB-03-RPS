@@ -15,26 +15,30 @@ buttonSubmit.addEventListener('click', () => {
     const selectedThrow = document.querySelector('input:checked');
     const userThrow = selectedThrow.value;
     let oppThrow = Math.ceil(Math.random() * 3);
-    let ratio = Math.ceil((totalWins / totalPlays) * 100);
-    let losses = Math.ceil(totalPlays - (totalWins + totalDraws));
+//  let ratio
+//  let losses = Math.ceil(totalPlays - (totalWins + totalDraws));
     if (compareThrow(userThrow, getThrow(oppThrow)) === 'win') {
         totalPlays++;
         totalWins++;
+        ratio = Math.ceil((totalWins / totalPlays) * 100);
         displayTotalWins.textContent = `Total Wins: ${totalWins} Total Draws: ${totalDraws} Total Losses: ${losses}`;
         displayTotalPlays.textContent = `Total Plays: ${totalPlays}, W/L: ${ratio}%`;
         displayFeedback.textContent = `You Won!`;
     } else if (compareThrow(userThrow, getThrow(oppThrow)) === 'lose') {
         totalPlays++;
+        ratio = Math.ceil((totalWins / totalPlays) * 100);
         displayTotalWins.textContent = `Total Wins: ${totalWins} Total Draws: ${totalDraws} Total Losses: ${losses}`;
         displayTotalPlays.textContent = `Total Plays: ${totalPlays}, W/L: ${ratio}%`;
         displayFeedback.textContent = `You Lost!`;
     } else if (compareThrow(userThrow, getThrow(oppThrow)) === 'draw') {
         totalPlays++;
         totalDraws++;
+        ratio = Math.ceil((totalWins / totalPlays) * 100);
         displayTotalWins.textContent = `Total Wins: ${totalWins} Total Draws: ${totalDraws} Total Losses: ${losses}`;
         displayTotalPlays.textContent = `Total Plays: ${totalPlays}, W/L: ${ratio}%`;
         displayFeedback.textContent = `Draw!`;
     }
+        
 });
 
 buttonReset.addEventListener('click', () => {
