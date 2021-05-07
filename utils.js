@@ -26,7 +26,6 @@ export function compareThrow(userThrow, computerThrow) {
 }
 
 export function printSpaget(tPlays, tWins, tDraws) {
-    tPlays++;
     let ratio = Math.ceil((tWins / tPlays) * 100);
     const displayTotalWins = document.querySelector('#total-wins');
     const displayTotalPlays = document.querySelector('#total-plays');
