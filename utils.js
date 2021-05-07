@@ -13,14 +13,14 @@ export function getThrow(someNumber) {
 export function compareThrow(userThrow, computerThrow) {
     // draw portion
     if (userThrow === computerThrow) {
-        return 0;
+        return 'draw';
     } 
     // loss portion
     else if ((userThrow === 'Bolder' && computerThrow === 'Parchment') || (userThrow === 'Parchment' && computerThrow === 'Shears') || (userThrow === 'Shears' && computerThrow === 'Bolder')) {
-        return -1;
+        return 'lose';
     } 
     // win portion
     else if ((userThrow === 'Bolder' && computerThrow === 'Shears') || (userThrow === 'Parchment' && computerThrow === 'Bolder') || (userThrow === 'Shears' && computerThrow === 'Parchment')) {
-        return +1;
+        return 'win';
     }
 }

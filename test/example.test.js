@@ -3,12 +3,12 @@ import { compareThrow } from '../utils.js';
 
 const test = QUnit.test;
 
-test('Should take in two of the same throws and return 0', (expect) => {
+test('Should take in two of the same throws and return draw', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expectedB = 0;
-    const expectedP = 0;
-    const expectedS = 0;
+    const expectedB = 'draw';
+    const expectedP = 'draw';
+    const expectedS = 'draw';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -26,9 +26,9 @@ test('Should take in two of the same throws and return 0', (expect) => {
 test('Should take in a winning userThrow and losing oppThrow and return +1', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expectedB = +1;
-    const expectedP = +1;
-    const expectedS = +1;
+    const expectedB = 'win';
+    const expectedP = 'win';
+    const expectedS = 'win';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -46,9 +46,9 @@ test('Should take in a winning userThrow and losing oppThrow and return +1', (ex
 test('Should take in a losing userThrow and wining oppThrow and return -1', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expectedB = -1;
-    const expectedP = -1;
-    const expectedS = -1;
+    const expectedB = 'lose';
+    const expectedP = 'lose';
+    const expectedS = 'lose';
     
     //Act 
     // Call the function you're testing and set the result to a const
